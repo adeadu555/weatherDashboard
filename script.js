@@ -4,6 +4,7 @@ function displayWeather () {
 
     var cityInAmerica = $("#searchCity").val();
 
-    var queryURL = api.openweathermap.org / data / 2.5 / weather ? q = { city name } & appid={ API key }
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInAmerica + "&appid=184822765e91fe1b29c25df4c0a41998";
+
 
 }
