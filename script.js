@@ -20,13 +20,12 @@ function displayWeather () {
 
 
   
-    var fiveDayUrl = api.openweathermap.org / data / 2.5 / forecast ? q = { city name } & appid={ API key }
+        var fiveDayUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInAmerica + "&appid=184822765e91fe1b29c25df4c0a41998";
 
-    
+
     $.ajax({
         url: fiveDayUrl,
         method: "GET"
     }).then(function (response) {
         console.log(response)
         $("").empty();
-
