@@ -6,3 +6,6 @@ nav h2 {
 #forecast {
     visibility: hidden;
 }
+#current-weather p {
+    font-size: 18px;
+}

@@ -1,0 +1,5 @@
+var cities = [];
+
+function displayWeather () {
+    
+}
