@@ -12,7 +12,21 @@ function displayWeather () {
     }).then(function (response) {
     
         console.log(response)
+        $("#TodaysWeather").empty();
 
-    })
+        var cityBoard = $("<div class='city'>");
+        
 
-}
+
+
+  
+    var fiveDayUrl = api.openweathermap.org / data / 2.5 / forecast ? q = { city name } & appid={ API key }
+
+    
+    $.ajax({
+        url: fiveDayUrl,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response)
+        $("").empty();
+
