@@ -1,0 +1,8 @@
+nav h2 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#forecast {
+    visibility: hidden;
+}
