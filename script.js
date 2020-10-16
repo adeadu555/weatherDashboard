@@ -28,4 +28,45 @@ function displayWeather () {
         method: "GET"
     }).then(function (response) {
         console.log(response)
-        $("").empty();
+        $("#fiveDay").empty();
+        var fiveDay = response.list;
+    
+
+        function generateButtons() {
+
+            $("#UScitiesbuttons").empty();
+
+            for (var i = 0; i < citiesinAmerica.length; i++) {
+
+                var UScitiesBtn = $("<button type='button' class='btn btn-warning'>");
+
+                UScitiesBtn.addClass("city-btn");
+
+                UScitiesBtn.attr("data-city", citiesinAmerica[i]);
+
+                UScitiesBtn.text(citiesinAmerica[i]);
+
+                $("#UScitiesbuttons").append(UScitiesBtn);
+
+                localStorage.setItem(citiesinAmerica, JSON.stringify(UScitiesBtn))
+            }
+        }
+
+      
+        $("#searchCityBtn").on("click", function (event) {
+            event.preventDefault();
+
+            var city = $("#searchBtn").val().trim();
+
+            citiesinAmerica.push(city);
+
+            addButtons();
+
+            displayWeather();
+
+        });
+
+        generateButtons();
+
+        $(document).on("click", ".city-btn", displayWeather);
+
